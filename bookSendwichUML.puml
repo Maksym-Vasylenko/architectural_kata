@@ -1,0 +1,20 @@
+@startuml
+
+title "Book a sandwich"
+actor User
+User -> App: getAvailableFood(shopId)
+App -> InventoryService: getAvailableFood(shopId)
+InventoryService -> DictionaryService : getProductDescriptions
+InventoryService <-- DictionaryService : productDescriptions
+
+InventoryService -> InventoryService: merge products and descriptions
+
+InventoryService --> App : availableProducts (3 sandwiches)
+App --> User : availableFood (3 sandwiches)
+
+User -> App: Book 1 sandwich
+App -> InventoryService: Book 1 sandwich
+App <-- InventoryService: booking completed
+User <-- App: booking completed
+
+@enduml
