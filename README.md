@@ -1,7 +1,7 @@
 # architectural_kata_healthy_food_system
 
 This repo contains diagrams and description for architecture kata Farmacy Food.
-To better understand description open please system design diagram.
+For better understanding of this description open please system design diagram.
 
 Design of this system includes several types of architecture patterns: microserveces, service-based and event-drivern pattern.
 
