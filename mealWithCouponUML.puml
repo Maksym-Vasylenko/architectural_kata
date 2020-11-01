@@ -1,0 +1,14 @@
+@startuml
+
+title "Buy a meal with a coupon - Sequence Diagram"
+
+actor Purchaser
+actor Seller
+Purchaser -> Seller: showCoupon()
+Seller -> Admin: scanCoupon()
+Admin -> CouponService: validateCoupon(couponHash)
+Admin <-- CouponService: return coupon summary
+Seller <-- Admin: coupon summary info
+Purchaser <-- Seller: resolve discount desicion
+
+@enduml
