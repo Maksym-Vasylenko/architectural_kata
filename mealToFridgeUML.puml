@@ -1,0 +1,11 @@
+@startuml
+
+title "Add new meal to shop's fridge - Sequence Diagram"
+
+actor Seller
+Seller -> Fridge: putMeal()
+Fridge -> FMS: postNewMeal()
+FMS -> FMSAdapter: postMealAddedEvent()
+FMSAdapter -> InventoryService: handleEvent()
+
+@enduml
