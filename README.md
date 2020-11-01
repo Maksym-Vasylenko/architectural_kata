@@ -17,4 +17,4 @@ we have less operational work. Also with this approach we tryied to avoid distri
 Inventory service is stateless which means that it can be scaled horizontically as all other services.
 
 Event based architecture was used to build part of system that accept events from external systems and then can process them.
-Architectural descision why this pattern was selected is described in another file.
+Architectural descision why this pattern was selected is described in  streaming-spec file.
